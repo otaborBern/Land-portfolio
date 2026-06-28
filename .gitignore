@@ -1,0 +1,12 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Node.js (for future projects)
+node_modules/
+
+# Environment variables
+.env
