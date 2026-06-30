@@ -61,3 +61,44 @@ window.addEventListener("resize", () => {
     }
 
 });
+
+
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const button = form.querySelector("button");
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+    result.textContent = "";
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            result.style.color = "green";
+            result.textContent = "✅ Your consultation request has been sent successfully!";
+            form.reset();
+        } else {
+            result.style.color = "red";
+            result.textContent = data.message || "Something went wrong.";
+        }
+
+    } catch (error) {
+        result.style.color = "red";
+        result.textContent = "Network error. Please try again.";
+    }
+
+    button.disabled = false;
+    button.textContent = "Request Free Consultation";
+});

@@ -6,7 +6,7 @@ Skip to content
 </a>
 
     <head>
-        <title><Bern-portfolio></Bern-portfolio></title>
+        <title>Bern-portfolio</title>
         <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,10 +29,10 @@ content="Bernard Otabor | Frontend Web Developer">
 content="Responsive websites, business dashboards and modern web applications.">
 
 <meta property="og:image"
-content="https://yourdomain.com/images/preview.jpg">
+content="https://https://otaborbern.github.io/Land-portfolio/images/preview.jpg">
 
 <meta property="og:url"
-content="https://yourdomain.com">
+content="https://https://otaborbern.github.io/Land-portfolio">
 
 <meta property="og:type"
 content="website">
@@ -46,7 +46,7 @@ content="Bernard Otabor | Frontend Developer">
 content="Responsive websites, business dashboards and modern web applications.">
 
 <meta name="twitter:image"
-content="https://yourdomain.com/images/preview.jpg">
+content="https://https://otaborbern.github.io/Land-portfolio/images/preview.jpg">
 <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon-16x16.png">
@@ -55,7 +55,7 @@ content="https://yourdomain.com/images/preview.jpg">
 <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
 <link rel="manifest" href="./images/favicon-16x16.png">
 <link rel="canonical"
-href="https://yourdomain.com/">
+href="https://https://otaborbern.github.io/Land-portfolio/">
 <link href="style-min.css" rel="stylesheet">
 <link
 rel="stylesheet"
@@ -67,11 +67,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 "@context":"https://schema.org",
 "@type":"Person",
 "name":"Bernard Otabor",
-"url":"https://yourdomain.com",
+"url":"https://https://otaborbern.github.io/Land-portfolio",
 "jobTitle":"Frontend Web Developer",
 "sameAs":[
 "https://github.com/otaborBern",
-"https://linkedin.com/in/yourprofile"
+"https://linkedin.com/in/otabor-bernard"
 ]
 }
 
@@ -92,7 +92,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <!-- Logo -->
         <a href="#home" class="navbar__brand" aria-label="WebMaster Developer Home">
             <img
-                src="./c_images/logo.png"
+                src="./images/logo.png"
                 alt="WebMaster Developer Logo"
                 class="navbar__logo"
             >
@@ -876,78 +876,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
                         <!-- Contact Form -->
 
-                        <div class="contact__form">
-
-                            <h3>Request a Consultation</h3>
-
-                            <form>
-
-                                <div class="form-group">
-
-                                    <label for="name">
-                                        Full Name
-                                    </label>
+                                <form id="contact-form"  action="https://api.web3forms.com/submit" method="POST">
 
                                     <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="John Doe"
-                                    required>
+                                        type="hidden"
+                                        name="access_key"
+                                        value="c2ed1945-bfc1-40e4-a077-d452e4d50bd7">
 
-                                </div>
-
-                                <div class="form-group">
-
-                                    <label for="email">
-                                        Email Address
-                                    </label>
-
+                                    <!-- Honeypot -->
                                     <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="john@example.com"
-                                    required>
+                                        type="checkbox"
+                                        name="botcheck"
+                                        style="display:none;">
 
-                                </div>
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" name="name" required>
+                                    </div>
 
-                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" name="email" required>
+                                    </div>
 
-                                    <label for="phone">
-                                        Phone Number
-                                    </label>
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" name="phone">
+                                    </div>
 
-                                    <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="+234 XXX XXX XXXX">
+                                    <div class="form-group">
+                                        <label>Project Details</label>
+                                        <textarea name="message" required></textarea>
+                                    </div>
 
-                                </div>
+                                    <button type="submit" class="contact__btn">
+                                        Request Free Consultation
+                                    </button>
 
-                                <div class="form-group">
+                                    <p id="result"></p>
 
-                                    <label for="message">
-                                        Project Details
-                                    </label>
-
-                                    <textarea
-                                    id="message"
-                                    name="message"
-                                    placeholder="Tell us about your project..."
-                                    required></textarea>
-
-                                </div>
-
-                                <button
-                                type="submit"
-                                class="contact__btn">
-                                    Request Free Consultation
-                                </button>
-
-                            </form>
-
+                                </form>
                         </div>
 
                     </div>

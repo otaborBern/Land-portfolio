@@ -58,7 +58,7 @@ html{
     position: absolute;
     top: -50px;
     left: 20px;
-    background: #2563eb;
+    background:transparent;
     color: #fff;
     padding: 12px 20px;
     text-decoration: none;
@@ -1715,6 +1715,12 @@ body{
     .contact{
         padding:7.5rem;
     }
+}
+
+#result{
+    margin-top:15px;
+    font-weight:600;
+    text-align:center;
 }
 
 
